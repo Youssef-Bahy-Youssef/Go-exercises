@@ -1,0 +1,3 @@
+The help message shows 20°C instead of 20.0 because the flag package prints the default value by calling the type’s String() method,
+not by displaying the raw numeric value. Since our custom temperature type formats its value as "20°C" inside String(),
+that is what appears in the help output. This demonstrates how Go uses interfaces to let each type control its own formatting.
